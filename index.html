@@ -4,21 +4,16 @@
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene id="Ma scene">
-      <!-- Lumière ambiante -->
-      <a-light type="ambient" color="#ffffff"></a-light>
-
+    <a-scene id="Ma scene"
       <!-- Lumière directionnelle -->
       <a-light type="directional" color="#ffffff" intensity="0.8" position="2 4 2"></a-light>
-
       <!-- Objet 3D correctement chargé et fermé -->
-      <a-entity 
+      <a-entity>
         id="mon-objet" 
         obj-model="obj: ./tree/tree.obj; mtl: ./tree/tree.mtl"
         position="0 0 -5"
         scale="0.5 0.5 0.5">
       </a-entity>
-
       <!-- Caméra -->
       <a-entity camera position="0 1.6 0"></a-entity>
     </a-scene>

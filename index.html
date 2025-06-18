@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Mon arbre A-Frame</title>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene background="color: #ECECEC">
-      
-      <!-- Lumière -->
-      <a-light type="ambient" color="#fff" intensity="0.6"></a-light>
-      <a-light type="directional" color="#fff" intensity="1" position="2 4 4"></a-light>
-
-      <!-- Modèle OBJ/MTL -->
-      <a-entity 
-        obj-model="obj: url(tree/tree.obj); mtl: url(tree/tree.mtl)" 
-        position="0 0 -5" 
-        scale="0.5 0.5 0.5">
-      </a-entity>
-
-      <!-- Caméra -->
-      <a-entity camera position="0 1.6 0"></a-entity>
+    <a-scene id="Ma scene">
+      <a-box id="boite" position="1 0.45179 1.26352" color="black" rotation="12.041281022469382 69.66020873200549 29.369243620610867">      </a-box>
+      <a-light id="lampe" light="distance: 0.65; intensity: 7.33; type: ambiant; castShadow: true" position="0.87378 1.00208 0.50374"></a-light>
+      <a-entity id="mon objet" gltf-model="./teemto_pagalies_podracer.glb" animation-mixer="" scale="0.01 0.01 0.01" position="0 0 -3.85199" rotation="0 0 0"></a-entity>
     </a-scene>
   </body>
 </html>

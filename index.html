@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <title>Mon arbre A-Frame</title>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene id="Ma scene"
-      <!-- Lumière directionnelle -->
-      <a-light type="directional" color="#ffffff" intensity="0.8" position="2 4 2"></a-light>
-      <!-- Objet 3D correctement chargé et fermé -->
-      <a-entity>
-        id="mon-objet" 
-        obj-model="obj: ./tree/tree.obj; mtl: ./tree/tree.mtl"
-        position="0 0 -5"
+    <a-scene background="color: #ECECEC">
+      
+      <!-- Lumière -->
+      <a-light type="ambient" color="#fff" intensity="0.6"></a-light>
+      <a-light type="directional" color="#fff" intensity="1" position="2 4 4"></a-light>
+
+      <!-- Modèle OBJ/MTL -->
+      <a-entity 
+        obj-model="obj: url(tree/tree.obj); mtl: url(tree/tree.mtl)" 
+        position="0 0 -5" 
         scale="0.5 0.5 0.5">
       </a-entity>
+
       <!-- Caméra -->
       <a-entity camera position="0 1.6 0"></a-entity>
     </a-scene>
   </body>
 </html>
+
